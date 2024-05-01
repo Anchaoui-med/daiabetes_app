@@ -1,4 +1,4 @@
-python=3.9.18
+
 azureml-train-automl-runtime==1.55.0.post1
 inference-schema
 azureml-interpret==1.55.0
