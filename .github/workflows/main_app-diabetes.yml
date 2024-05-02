@@ -31,12 +31,12 @@ jobs:
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-      - name: install libgthread
-        run: sudo apt-get install -y libgthread-2.0.so.0
-
+      
       - name: install libglib
         run: sudo apt-get install -y libglib2.0-dev
-
+      - name: install libgthread
+        run: sudo apt-get install -y libgthread-2.0.so.0
+        
       - name: remove libgomp1
         run: sudo apt-get remove -y libgomp1
         
