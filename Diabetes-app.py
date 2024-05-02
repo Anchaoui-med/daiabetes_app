@@ -38,7 +38,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model_diabetes=pickle.load(open("model.pkl", "rb"))
+model_diabetes=pickle.load("model.pkl", "rb")
 prediction = model_diabetes.predict(df)
 prediction_proba = model_diabetes.predict_proba(df)
 
