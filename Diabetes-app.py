@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 #import azureml.automl.core
-
+import xgboost
 st.write("""
 # MSDE4 : Cloud Computing Course
 ## Diabetes Prediction App
