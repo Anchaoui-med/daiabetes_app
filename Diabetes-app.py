@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
 import pickle
-#import azureml.automl.core
 
 st.write("""
-# MSDE4 : Cloud Computing Course
+# MSDE4 : Cloud Computing Project
 ## Diabetes Prediction App
 
-This app predicts the Diabete patient
+This app predicts the Diabetes patient
 """)
 
 st.sidebar.header('User Input Parameters')
@@ -38,7 +37,10 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model_diabetes=pickle.load(open('model.pkl', 'rb'))
+# Load the model
+model_diabetes = pickle.load(open("model.pkl", "rb"))
+
+# Predict
 prediction = model_diabetes.predict(df)
 prediction_proba = model_diabetes.predict_proba(df)
 
@@ -47,4 +49,3 @@ st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
-
