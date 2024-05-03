@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import joblib
+
 
 st.write("""
 # MSDE4 : Cloud Computing Project
@@ -39,7 +39,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Load the model
-model_diabetes = joblib.load('model.pkl')
+model_diabetes = pickle.load(open('model.pkl', 'rb'))
 
 
 # Predict
