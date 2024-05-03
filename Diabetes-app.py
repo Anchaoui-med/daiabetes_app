@@ -38,7 +38,9 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Load the model
-model_diabetes = pickle.load(open("model.pkl", "rb"))
+with open("model.pkl", "rb") as file:
+    model_diabetes = pickle.load(file)
+
 
 # Predict
 prediction = model_diabetes.predict(df)
