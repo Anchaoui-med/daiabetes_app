@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from sklearn.externals import joblib
+import joblib
 
 st.write("""
 # MSDE4 : Cloud Computing Project
