@@ -13,7 +13,6 @@ st.markdown("""
 <h3 style='text-align: center;'>*** *** ***</h3>
   
 """, unsafe_allow_html=True)
-
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
@@ -36,7 +35,7 @@ def user_input_features():
             'Age': Age}
     features = pd.DataFrame(data, index=[0])
     return features
-
+	
 df = user_input_features()
 
 st.subheader('Parameters')
@@ -44,7 +43,6 @@ st.dataframe(df, hide_index=True)
 
 # Load the model
 model_diabetes = pickle.load(open('model.pkl', 'rb'))
-
 
 # Predict
 prediction = model_diabetes.predict(df)
